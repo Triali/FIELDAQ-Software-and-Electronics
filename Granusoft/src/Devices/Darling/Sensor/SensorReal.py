@@ -6,13 +6,14 @@ from Devices.Darling.sensors.Y_Load import Y_Load
 from Devices.Darling.sensors.Pot import Pot
 from Devices.Darling.sensors.IMU import IMU
 from Devices.Darling.sensors.Height import HeightPoT
+from util.SingletonClass import SingletonClass
 import datetime
 import board
 import busio
 import adafruit_ads1x15.ads1015 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn
 
-class Sensor:
+class Sensor(SingletonClass):
 
     def __init__(self):
         self.REAL_DATA = True
