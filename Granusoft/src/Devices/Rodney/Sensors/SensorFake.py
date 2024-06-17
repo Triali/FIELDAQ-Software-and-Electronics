@@ -1,8 +1,9 @@
 import datetime
 from math import sin
 import math
+from util.SingletonClass import SingletonClass
 
-class Sensor:
+class Sensor(SingletonClass):
 
     def __init__(self):
         self.REAL_DATA = False
