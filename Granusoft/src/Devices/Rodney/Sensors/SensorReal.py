@@ -7,13 +7,14 @@ from Devices.Rodney.Sensors.Height import HeightPoT
 from Devices.Rodney.Sensors.Strain8 import Strain8
 from Devices.Rodney.Sensors.WhiskerFront import WhiskerFront
 from Devices.Rodney.Sensors.WhiskerBack import WhiskerBack
+from util.SingletonClass import SingletonClass
 import datetime
 import board
 import busio
 import adafruit_ads1x15.ads1015 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn
 
-class Sensor:
+class Sensor(SingletonClass):
 
     def __init__(self):
         self.REAL_DATA = True
